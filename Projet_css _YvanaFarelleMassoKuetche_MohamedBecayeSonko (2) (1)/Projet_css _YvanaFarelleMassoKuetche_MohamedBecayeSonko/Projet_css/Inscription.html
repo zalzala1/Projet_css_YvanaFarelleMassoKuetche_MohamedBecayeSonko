@@ -28,12 +28,13 @@
                 <li>
                     <a href="contact.html">Contacts</a>
                 </li>
+                <li><a href="Acheter.html">ACHAT</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <form>
+        <form id="registrationForm">
             <h2>Formulaire d'inscription</h2>
             <p>Remplissez attentivement le formulaire</p>
 
@@ -46,11 +47,12 @@
             </p>
             <p>
                 Sexe
-                <select>
-                    <option>Please select</option>
-                    <option>Femme</option>
-                    <option>Homme</option>
-                </select>
+                
+         <fieldset>
+                    <legend>Qualité<abbr title="Ce champ est obligatoire">*</abbr></legend>
+                    <input type="radio" required name="title" id="r1" value="Mr"><label for="r1">M.</label>
+                    <input type="radio" required name="title" id="r2" value="Ms"><label for="r2">Mme.</label>
+                  </fieldset>
             </p>
             <p>
                 Date de naissance:
@@ -113,20 +115,23 @@
                 </label>
             </p>
             <p>
-                <label>Numero de telephone:
-                    <input type="text" placeholder="Numero de telephone" maxlength="10">
-                </label>
+                <label for="phone">Numéro de téléphone:</label>
+            <input type="tel" id="phone" placeholder="123-456-7890" 
+                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required title="Format: 123-456-7890">
+
             </p>
 
             <p>
-                <label>Code postal:
-                    <input type="text" placeholder="Q1Q1Q1" maxlength="6">
-                </label>
+               
+            <label for="postalCode">Code postal:</label>
+            <input type="text" id="postalCode" placeholder="A1A 1A1" 
+                   pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required title="Format: A1A 1A1">
+
             </p>
 
             <p>
                 <label>Adresse:
-                    <input type="text" placeholder="42 rue de la réponse à la vie" maxlength="6">
+                    <input type="text" placeholder="42 rue de la réponse à la vie" maxlength="100">
                 </label>
             </p>
 
@@ -135,17 +140,21 @@
 
             <p> <input type="submit" value="Inscrire"> </p>
 
-
+            
         </form>
+        <button id="addParagraph">Ajouter un paragraphe</button>
+        <button id="removeParagraph">Supprimer un paragraphe</button>
+    
     </main>
 
     <footer>
         <div class="container">
             <p>© Boutique de Cosmétiques Yva & Moham- Tous droits réservés</p>
             <p>Créé le: 16 Octobre</p>
-            <a href="https://github.com/votreprofil">GitHub</a>
+            <a href="https://github.com/zalzala1/Projet_css_YvanaFarelleMassoKuetche_MohamedBecayeSonko.git">GitHub</a>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
